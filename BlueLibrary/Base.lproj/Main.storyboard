@@ -21,12 +21,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p4z-HA-PEH">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p4z-HA-PEH" customClass="HorizontalScrollerView" customModule="BlueLibrary" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="375" height="120"/>
                                 <color key="backgroundColor" red="0.78837685899999999" green="0.78972791379999996" blue="0.81034482760000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="GN3-Bm-BOH"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="H6D-sK-T5z"/>
                                 </constraints>
                             </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="81X-Jx-YOO">
@@ -95,6 +94,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Pop Music" id="nM5-UT-7D1"/>
                     <connections>
+                        <outlet property="horizontalScrollerView" destination="p4z-HA-PEH" id="UT8-He-ju6"/>
                         <outlet property="tableView" destination="cwq-tQ-OTD" id="Udr-NB-BhJ"/>
                         <outlet property="trashBarButtonItem" destination="MJK-vn-acH" id="rWl-cY-kGU"/>
                         <outlet property="undoBarButtonItem" destination="uHV-hL-goc" id="e05-Px-uRR"/>
@@ -107,7 +107,7 @@
         <!--Navigation Controller-->
         <scene sceneID="bNY-wR-nUb">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RMy-1p-6vS" sceneMemberID="viewController">
+                <navigationController restorationIdentifier="currentAlbumIndex" automaticallyAdjustsScrollViewInsets="NO" id="RMy-1p-6vS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zR6-tP-zeN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
